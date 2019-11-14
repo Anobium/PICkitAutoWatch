@@ -3,14 +3,7 @@
 
 === Introduction
 
-These are the pages and the toolchain used to generate the Great Cow BASIC Help system.
-
-The source files, in ADOC format, are here: https://github.com/Anobium/Great-Cow-BASIC-Help/tree/master/source
-
-For the online operation Help, see here: http://gcbasic.sourceforge.net/help
-
-For the daily build, see here: http://gcbasic.sourceforge.net/help/output/
-
+These are the pages and the toolchain used to generate the PICkit: AutoWatch Help system.
 
 
 This is a simple cheat sheet for editors of the Great Cow BASIC Help source files.
@@ -23,7 +16,7 @@ for now its main use is to show bugs, design issues, GitHub limitations
 and other differences from http://powerman.name/doc/asciidoc[how Asciidoc
 cheatsheet should really looks like].
 
-=== Great Cow BASIC Help
+=== Help
 
 The format is pre-determined.&#160;&#160;Meaning the layout and the style sheets are already mandated, please refer to existing Help pages as a reference.&#160;&#160;These notes are to enable the casual editor insights into some of the tricks when editing Asciidoc's.
 
@@ -61,44 +54,22 @@ To add a table, using the following:
 |Purpose
 |Default
 
-|`GLCD_WIDTH`
-|The width parameter of the GLCD
+|`String`
+|The width parameter of the String
 |Set automatically
 
-|`GLCD_HEIGHT`
-|The height parameter of the GLCD
+|`String2`
+|The height parameter of the String
 |Set automatically
 
-|`GLCDFontWidth`
-|Specifies the font width of the Great Cow BASIC font set.
+|`String3`
+|Specifies the String.
 |6
 |===
 
 ----
 
-Will dispay as:
 
-[cols="3,4,4", options="header,autowidth"]
-|===
-|Constant
-|Purpose
-|Default
-
-|`GLCD_WIDTH`
-|The width parameter of the GLCD
-|Set automatically
-
-|`GLCD_HEIGHT`
-|The height parameter of the GLCD
-|Set automatically
-
-|`GLCDFontWidth`
-|Specifies the font width of the Great Cow BASIC font set.
-|6
-|===
-{empty} +
-{empty} +
-To add an empty line, use the following:
 
 .An example empty line
 ----
