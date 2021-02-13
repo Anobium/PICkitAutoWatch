@@ -1,0 +1,89 @@
+== Select Tab
+
+*Introduction:*
+
+The Select Tab is the key interface within the application.
+This tab enable the following:
+[start=1]
+ . Select of the PIC microcontroller
+
+ . Access to the Great Cow BASIC utilities - these are Operating System Specific and microcontroller specific
+
+ . Access the microcontroller dashboard
+
+ . Search for a microcontroller
+
+ . Edit the configuration options
+
+ . Copy the configuration to the CUT/PASTE buffer, and
+
+ . Reset the config to the defaults
+
+
+
+The picture below shows the main area of the Select Tab
+
+image::FrontScreenDetails.PNG[graphic,align="center", scalefit="1"]
+
+{empty} +
+{empty} +
+*Selection of the microcontroller*
+
+Selection can be made using two methods.&#160;&#160;
+Use either the `PIC drop menu:` or the `search:` dialog.&#160;&#160;
+
+
+You can filter the microcontrollers shown see <<_filters, Set Filter>>
+
+{empty} +
+{empty} +
+*Utilities*
+
+Selects microcontroller and operating specific utilities.
+{empty} +
+{empty} +
+`PPS Tool button:` is supported by Windows and microcontroller that have PPS.&#160;&#160;Selection will launch the PPS Tool application.
+
+`GCB Pref button:` Great Cow BASIC preferences is for Windows only.&#160;&#160;Selection will launch the Great Cow BASIC preferences application.
+
+`GCB IDEbutton:`  Great Cow BASIC preferences is for Windows only.&#160;&#160;Selection will launch the SynWrite IDE.
+
+{empty} +
+{empty} +
+*DashBoard*
+
+Selects microcontroller specific datasheets.
+{empty} +
+`Datasheet button:` &#160;&#160; Will open the Microchip PDF datasheet file for the selected PIC microcontroller in your web browser.
+
+`Errata button`&#160;&#160;Will open the Microchip PDF errata file for the selected PIC microcontroller in your web browser.
+
+`PIC webpage button`&#160;&#160;Will open the Microchip web page for the selected PIC microcontroller.
+
+{empty} +
+{empty} +
+*Copy Config*
+
+`Copy Config button:` Copy any of the configuration options set to the CUT/PASTE clipboard.&#160;&#160;You can paste them into your Great Cow BASIC IDE or other editor.
+
+{empty} +
+{empty} +
+*Reset Config*
+
+`Reset Config button:` Resets the configuration options removing all edits.
+
+{empty} +
+{empty} +
+*Configuation Options*
+
+`Dropdown dialogs:` This permits the editing of the configuration.&#160;&#160;
+Items marked with `*` are the Great Cow BASIC default selections.
+
+
+{empty} +
+{empty} +
+
+
+
+
+

@@ -1,1 +1,1 @@
-gcbdoc PICkitAutoWatch chm
+gcbdoc PICINFO chm

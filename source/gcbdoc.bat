@@ -62,16 +62,69 @@ call java com.icl.saxon.StyleSheet ..\..\source\%1.xml %GCBxsl% ^
  chunk.separate.lots=0 chunk.section.depth=6 htmlhelp.remember.window.position=1 use.id.as.filename=1 ^
  htmlhelp.hhp="%1.hhp" htmlhelp.hhc="%1.hhc" htmlhelp.chm="%1.chm" generate.toc=" " ^
  generate.section.toc.level=6 chunk.first.sections=1 htmlhelp.hhc.show.root=0 ^
- htmlhelp.default.topic="_introducing_pickit_autowatch.html" ^
- html.stylesheet="gcbdoc.css" generate.book.toc=0 htmlhelp.title="PICkit: AutoWatch Help"
+ htmlhelp.default.topic="_introducing_picinfo.html" ^
+ html.stylesheet="gcbdoc.css" generate.book.toc=0 htmlhelp.title="PICInfo Help"
 if %1 == gcbasic call ..\..\source\cleanhhc.bat
 copy %GCBase%\source\gcbdoc.css .
 rem copy %GCBase%\source\images\logo.png .\images
 call %GCBase%\prog\utils\hhc %1.hhp
+
+xcopy *.* ..\md /I /Y /S > nul
+
 del *.htm*
 del *.hh*
 del *.css
 rmdir .\images /s /q
+
+
+REM Make WIKI section
+rem pause
+echo on
+cd
+rem pause
+cd ..\md
+del *.md
+del *.mod > nul
+
+
+del D:\PICInfo_help\trunk\output\wiki\*.* /Q
+FOR /F "tokens=*" %%G IN ('dir/b /s ^"*.html^"') DO (
+	rem echo %%G
+	rem "%~d1%~p1%~n1.lst"
+
+	..\..\prog\pandoc\pandoc -f HTML -t GFM %%G  -o "%%~dG%%~pG%%~nG.md"
+	gawk -f ../../prog/reprocess.awk "%%~dG%%~pG%%~nG.md" > "%%~dG%%~pG%%~nG.mod"
+)
+
+rename "_*.*" "/*.*"
+copy *.mod ..\md\*.md
+del *.md
+ren *.mod *.md
+ren ..\md\index.md  "home.md"
+del /q D:\PICInfo_help\trunk\output\wiki\*.*
+copy ..\md\*.* D:\PICInfo_help\trunk\output\wiki
+del /q D:\PICInfo_help\trunk\output\wiki\*.ht*
+del /q D:\PICInfo_help\trunk\output\wiki\gcbasic.*
+del /q D:\PICInfo_help\trunk\output\wiki\*.css
+del /q D:\PICInfo_help\trunk\output\wiki\*.chm
+del /q D:\PICInfo_help\trunk\output\wiki\*.hh*
+
+
+
+
+
+copy  D:\PICInfo_help\trunk\source\images D:\PICInfo_help\trunk\output\wiki\images
+
+del *.htm*
+del *.hh*
+del *.css
+del *.chm
+
+rmdir .\images /s /q
+rem pause
+REM End Make WIKI section
+
+
 cd %GCBase%\source
 del %1.xml
 set CLASSPATH=
@@ -108,12 +161,12 @@ if ERRORLEVEL 1 goto :ERROR
 rem
 echo create webhelp build.xml file
 rem
-echo ^<project^>                                    >  build.xml
-echo   ^<property name="input-xml" value="%1.xml"/^>                  >> build.xml
-echo   ^<property name="input-images-dirs" value="images/** figures/** graphics/**"/^>  >> build.xml
-echo   ^<property name="output-dir" value="../output/web/%1"/^>               >> build.xml
-echo   ^<import file="%GCBxsldir%\webhelp\build.xml"/^>                 >> build.xml
-echo ^</project^>                                   >> build.xml
+echo ^<project^> 																		>  build.xml
+echo   ^<property name="input-xml" value="%1.xml"/^> 									>> build.xml
+echo   ^<property name="input-images-dirs" value="images/** figures/** graphics/**"/^>	>> build.xml
+echo   ^<property name="output-dir" value="../output/web/%1"/^>	    					>> build.xml
+echo   ^<import file="%GCBxsldir%\webhelp\build.xml"/^>									>> build.xml
+echo ^</project^>																		>> build.xml
 rem
 echo calling ant...
 call ant webhelp

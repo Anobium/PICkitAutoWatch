@@ -1,0 +1,60 @@
+== Introducing PICInfo
+
+
+Welcome to the PICInfo software.  A support application for Great Cow BASIC.
+
+This application supports Microchip PIC microcontrollers only, for AVR see AVRInfo.
+
+This is a free application that generates configuration code to be inserted into your project.&#160;&#160;
+Using an intuitive interface, it enables and configures the coniguration functions specific to your application.
+
+The application also provides details of the microcontroller in terms of parameters like registers, register bits, interrupts.&#160;&#160;
+PICInfo supports 8-bit PIC microcontrollers.
+
+
+
+image::FrontScreen.PNG[graphic,align="center", auto]
+
+
+{empty} +
+{empty} +
+*Operating System Support*
+
+PICInfo is released with support for Windows, Linux and macOS.
+
+The application for Windows is included in the Great Cow BASIC release.
+
+{empty} +
+{empty} +
+*Operating System Specific Build*
+
+As the software is Open Source you can create the application for any of the supported operating systems.&#160;&#160;
+Download and install the XOJO development software, load the source PICInfo project and enjoy.&#160;&#160;
+You can modify the project and share.
+{empty} +
+{empty} +
+{empty} +
+{empty} +
+
+*First use of the application*
+
+The application requires a default Great Cow BASIC default CHIPDATA folder.
+The application will show the following `Initialising` as the selected microcontroller.
+The pictures show the initial start up message.
+
+image::InitialWindow.PNG[graphic,align="center", auto]
+
+Select `OK` and then select `EDIT/PREFERENCES` to set the default Great Cow BASIC default CHIPDATA folder.
+As show below:
+
+image::Preferences.PNG[graphic,align="center", auto]
+{empty} +
+{empty} +
+The dialog will validate the selected folder. &#160;&#160;The folder *MUST* contain the chipdata.def file.
+
+
+
+{empty} +
+{empty} +
+{empty} +
+{empty} +

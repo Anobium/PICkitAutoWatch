@@ -1,0 +1,27 @@
+== Registers Tab
+
+*Introduction:*
+
+This tab shows the register specific to the microcontroller.
+
+The three colums show the register name, the decimal address of the register and the hex address of the register.
+
+For specific details of the register, please refer to the microcontroller datasheet and if applicable the errata for the microcontroller.
+
+{empty} +
+{empty} +
+*Search*
+
+The `search:` dialog enables basic search of the data shown.
+
+Use the `right arrow` to locate the next match of the search.
+
+{empty} +
+{empty} +
+
+*Example tab*
+
+image::Registers.PNG[graphic,align="center", scalefit="1"]
+
+{empty} +
+{empty} +

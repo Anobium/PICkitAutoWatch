@@ -1,0 +1,28 @@
+== Options Tab
+
+*Introduction:*
+
+This tab shows the config options specific to the microcontroller.
+
+The first parameter is the configuration field that can be used to expose specific configuration bits.   The other parameters are the configuration field options that can be selected.
+
+For specific details of the configuration options, please refer to the microcontroller datasheet and if applicable the errata for the microcontroller.
+
+{empty} +
+{empty} +
+*Search*
+
+The `search:` dialog enables basic search of the data shown.
+
+
+Use the `right arrow` to locate the next match of the search.
+
+{empty} +
+{empty} +
+
+*Example tab*
+
+image::Options.PNG[graphic,align="center", scalefit="1"]
+
+{empty} +
+{empty} +

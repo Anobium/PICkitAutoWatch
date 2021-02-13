@@ -1,5 +1,5 @@
 == Changes
-*Formal Release of <>*
+*Formal Release*
 
 {empty} +
 [cols="^1,^1", options="header",width="60%"]
@@ -20,3 +20,5 @@
 {empty} +
 
 *Changes in this release*::
+
+Updated to include use of the `right arrow` to locate the next match of the search.

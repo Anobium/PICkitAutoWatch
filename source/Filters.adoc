@@ -1,0 +1,24 @@
+== Filters
+
+*Introduction:*
+
+This dialog enables the setting of a microcontroller filter, or, to clear an existing filter.&#160;&#160;
+A filter can be used to reduce the number of microcontrollers show in the Selection tab PIC dropdown.&#160;&#160;
+
+The picture shows the dialog:
+
+image::ChipFilter.PNG[graphic,align="center", scalefit="1"]
+
+{empty} +
+{empty} +
+
+The search is a basic match.&#160;&#160;
+The search does not support wildcards or regex searches.&#160;&#160;
+
+
+To clear a filter select the `clear:` button.
+
+
+
+{empty} +
+{empty} +
